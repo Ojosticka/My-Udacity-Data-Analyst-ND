@@ -20,7 +20,7 @@ I splitted the code into 2 major parts, Exploration and Explanatory. Data Explor
 
 For every question asked in this phase, I followed the "question - visualization - observation" framework.
 
-The Explanatory code file majorly had just the important observations gotten from the exploratory phase, and cleaner visualizations. This was in turn converted into a slideshow that can be found embedded in the project, file name - "Data_Viz_Part2.slides".
+The Explanatory code file majorly had just the important observations gotten from the exploratory phase, and cleaner visualizations. This was in turn converted into a slideshow that can be found embedded in the project, file name - "Data_Viz_Part2.slides". This might not be visible from Github as complaint of file size might occur, try cloning into a local repo and viewing directly on a browser.
 
 ### Dependencies/Libraries
 

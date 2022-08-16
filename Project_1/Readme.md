@@ -1,26 +1,29 @@
-# Loan Data Exploration
+# Investigating a TMDB Movie Dataset
 
-This project dives into the loans given out to applicants as recorded by Prosper over a couple of years, it contains about 113,937 records of applicants, their current status (completed - defaulters), the creditscore of each applicant, borrowersAPR, state of residence of applicants, if applicants are existing houseowners, employment status, income range etc. This project focuses on trying to figure out issues around what are the possible causes of defaulters defaulting the payment. A slide giving a high level summary of this is presented also for better understanding.
+This project explores a TMDB movie database, a movie database that consists of about 10,000 movies collected from TMDB, inclusive of parameters such as movie titles, casts, genres, budget, revenue, user ratings, popularity and many more... An end to end analysis of the data from wrangling, cleaning, performing Exploratory data analysis, and making insights and conclusions on the data will be seen in this project, as well as limitations and future work to be done on the analysis.
 
 ## Dataset
 
-The data set contains 113,937 of different loans and their uniue key for each loan. The data can be found via Kaggle [here](https://www.kaggle.com/datasets/shikhar07/prosper-loan-data)
-the dataset was made up of 81 columns which were well documented in the link [here](https://docs.google.com/spreadsheets/d/1gDyi_L4UvIrLTEC6Wri5nbaMmkGmLQBk-Yx3z0XDEtI/edit#gid=0).
+The data set contains about 10,000 records and 21 columns. The data can be found via Kaggle [here](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata), and documentation of the metadata and description for each column seen in the link.
 
 ## Code
 
-I splitted the code into 2 major parts, Exploration and Explanatory. Data Exploration had the following subsections:
+I splitted the code various subsections and added a table of content to give better formatting to the notebook. The sections were:
 
-- Reading the data
+- Introduction
 - Data Wrangling
-- Data Visualization 
-  - Univariate Data Exploration
-  - Bivariate Data Exploration
-  - Multivariate Data Exploration 
+- Exploratory Data Analysis (EDA)
+- Conclusions
 
-For every question asked in this phase, I followed the "question - visualization - observation" framework.
+## Goal/Questions Answered
 
-The Explanatory code file majorly had just the important observations gotten from the exploratory phase, and cleaner visualizations. This was in turn converted into a slideshow that can be found embedded in the project, file name - "Data_Viz_Part2.slides".
+The goal of the project was to answer questions based on the data available, some of the questions asked and answered in the file include:
+
+- Movie with Minimum and Maximum Profits
+- Movie with highest and lowest Vote Average
+- Most Occuring Genres produced over time
+- Can highly rated movies be used to predict the success of a movie based on profits made
+- Are longer movies more likely to be as profitable as average timed movies
 
 ### Dependencies/Libraries
 
@@ -34,17 +37,18 @@ Libraries used in this project include:
 
 ## Summary of Findings
 
-- Not all applicants are emloyed
-- For defaulters, majority of the loan types given to them fall under the category of poorly rated loans, with only very few of them given highly rated loans.
-- Majority of the loan applicants income range are from 100k and greater with emloyed status
-- The distribution of amount loaned of applicants is right skewed because there are few applicants with high loan demand.
-- LoanStatus with "current" and "completed" have their own homes as at when they applied for loans
-- "Professional" as an occupation had the highest number of defaulters.
-- Based on the ratio of deafuters to the ratio of loan recepients RD and SI states are the most likely to     default payment
-- The major reason for loan collection by most of the applicants was for "Debt Consolidation" by a great amount, this might want to be looked at.
+* **The Warrior's Way** movie has the highest budget, but it is also the same movie with the minimum profit. 
+* **Avatar** is the movie with highest profit and revenue.
+* **Drama** is the most produced movie genre.
+* There is a positive relationship between rating and profit.
+* Profit and vote averaged has a positive relationship, on the scatter plot, the highest profit fall among the highest vote rating.
+* Vote average increases as the vote count increase.
+* Popularity of movie is not dependent on the vote count.
+* Movies with runtime generally greater than 200 minutes are not as popular as movies with shorter timeframe. 
+
+## Limitations of Analysis
+
+* The currency of the data was not given. There's a high probability that most of the financial column could be in different currency, meaning it would affect our analysis result.
+* Our analysis is mainly descriptive, to get a better view of future predictions, we would want to explore the use of data science and machine learning algorithms
 
 
-## Key Insights for Presentation
-
-I want to look at the factors or features that had an effect on the amount loaned out. I also wanted to know the various people who were most likely to default a loan payment
-For simplicity of the visualization I have looked at only few variables. The main dataframe was broken down into various data set through the projects for simplicity and for easy analysis
