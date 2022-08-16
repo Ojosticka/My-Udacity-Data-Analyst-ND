@@ -1,28 +1,40 @@
-# Loan Data Exploration
+# Wrangling and Analyzing a Twitter Page that Rates Dogs
 
-This project dives into the loans given out to applicants as recorded by Prosper over a couple of years, it contains about 113,937 records of applicants, their current status (completed - defaulters), the creditscore of each applicant, borrowersAPR, state of residence of applicants, if applicants are existing houseowners, employment status, income range etc. This project focuses on trying to figure out issues around what are the possible causes of defaulters defaulting the payment. A slide giving a high level summary of this is presented also for better understanding.
+This project explores a Twitter user called "WeRateDogs" to get a better sense into the types of dogs rated and answer questions on what the followers of the page find interest in. 
 
 ## Dataset
 
-The data set contains 113,937 of different loans and their uniue key for each loan. The data can be found via Kaggle [here](https://www.kaggle.com/datasets/shikhar07/prosper-loan-data)
-the dataset was made up of 81 columns which were well documented in the link [here](https://docs.google.com/spreadsheets/d/1gDyi_L4UvIrLTEC6Wri5nbaMmkGmLQBk-Yx3z0XDEtI/edit#gid=0).
+The data used for this project is a gathering of 3 different datasets:
+- An existing downloaded archived data supplied by Udacity
+- Using the Requests library to download tweet image prediction (needed to get image predictions of each dog rated)
+- Using Tweepy to query additional data via Twitter API
+- A master dataframe having the combination of all 3 above after wrangling, can be found in project, file name - "twitter_archive_master" (about 2000 rows, 26 columns)
 
 ## Code
 
-I splitted the code into 2 major parts, Exploration and Explanatory. Data Exploration had the following subsections:
+I splitted the code various subsections to make the notebook easy to read and understand. The sections were:
 
-- Reading the data
-- Data Wrangling
-- Data Visualization 
-  - Univariate Data Exploration
-  - Bivariate Data Exploration
-  - Multivariate Data Exploration 
+- Data Gathering
+  - Archived twitter data
+  - Image prediction data
+  - Querying directly from Twitter using API
+- Data Assessing
+- Data Cleaning
+- Data Storage
+- Data Analysis & Visualization
 
-For every question asked in this phase, I followed the "question - visualization - observation" framework.
+## Goal/Questions Answered
 
-The Explanatory code file majorly had just the important observations gotten from the exploratory phase, and cleaner visualizations. This was in turn converted into a slideshow that can be found embedded in the project, file name - "Data_Viz_Part2.slides".
+The goal of the project was to answer questions based on the data available, some of the questions asked and answered in the file include:
 
-### Dependencies/Libraries
+- What stage of dog was more prominent
+- Trend of followers of WeRateDogs twitter account across the period the data was collected
+- Dog names that are most prominent in WeRateDogs twitter account
+- Heat map showing the relationships between retweets, favourites, followers
+
+You would want to check out the files "Act_report"(gives a summary of insights gotten in the project and questions asked) and "Wrangle_report"(summarizes the whole project, and steps taken at each point in time to arrive at the conclusion)
+
+## Dependencies/Libraries
 
 Libraries used in this project include:
 
@@ -30,21 +42,13 @@ Libraries used in this project include:
 - numpy - allows for easy mathematical manipulations of dataset
 - matplotlib - python plotting library to beautify visualizations
 - seaborn - plotting library majorly for exploring visualizations as it does not have as much customizable features as matplotlib.
+- requests - library used to access API's
+- os - library that helps accessing file and folder paths in local system easy
+- re - regular expressions library that helps with advanced string manipulations
+- bs4 - A library that helps access to data on websites easy
+- json - library used to help read javascript oriented notation
+- tweepy - twitters access library
+- io - useful for performing file I/O operations
+- PIL - library used to improve access to image files  
 - %matplotlib inline - allows visualizations to be visible in notebook
 
-## Summary of Findings
-
-- Not all applicants are emloyed
-- For defaulters, majority of the loan types given to them fall under the category of poorly rated loans, with only very few of them given highly rated loans.
-- Majority of the loan applicants income range are from 100k and greater with emloyed status
-- The distribution of amount loaned of applicants is right skewed because there are few applicants with high loan demand.
-- LoanStatus with "current" and "completed" have their own homes as at when they applied for loans
-- "Professional" as an occupation had the highest number of defaulters.
-- Based on the ratio of deafuters to the ratio of loan recepients RD and SI states are the most likely to     default payment
-- The major reason for loan collection by most of the applicants was for "Debt Consolidation" by a great amount, this might want to be looked at.
-
-
-## Key Insights for Presentation
-
-I want to look at the factors or features that had an effect on the amount loaned out. I also wanted to know the various people who were most likely to default a loan payment
-For simplicity of the visualization I have looked at only few variables. The main dataframe was broken down into various data set through the projects for simplicity and for easy analysis

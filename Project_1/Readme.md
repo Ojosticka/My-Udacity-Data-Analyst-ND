@@ -25,7 +25,7 @@ The goal of the project was to answer questions based on the data available, som
 - Can highly rated movies be used to predict the success of a movie based on profits made
 - Are longer movies more likely to be as profitable as average timed movies
 
-### Dependencies/Libraries
+## Dependencies/Libraries
 
 Libraries used in this project include:
 
