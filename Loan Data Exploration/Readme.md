@@ -36,12 +36,13 @@ Libraries used in this project include:
 
 - Not all applicants are emloyed
 - For defaulters, majority of the loan types given to them fall under the category of poorly rated loans, with only very few of them given highly rated loans.
-- Majority of the loan applicants income range are from 100k and greater with emloyed status
-- The distribution of amount loaned of applicants is right skewed because there are few applicants with high loan demand.
-- LoanStatus with "current" and "completed" have their own homes as at when they applied for loans
-- "Professional" as an occupation had the highest number of defaulters.
-- Based on the ratio of deafuters to the ratio of loan recepients RD and SI states are the most likely to     default payment
 - The major reason for loan collection by most of the applicants was for "Debt Consolidation" by a great amount, this might want to be looked at.
+- "Professional" as an occupation had the highest number of defaulters.
+- The distribution of amount loaned of applicants is right skewed because there are few applicants with high loan demand.
+- Based on the ratio of deafuters to the ratio of loan recepients RD and SI states are the most likely to     default payment
+- LoanStatus with "current" and "completed" have their own homes as at when they applied for loans
+- Majority of the loan applicants income range are from 100k and greater with emloyed status
+
 
 
 ## Key Insights for Presentation
