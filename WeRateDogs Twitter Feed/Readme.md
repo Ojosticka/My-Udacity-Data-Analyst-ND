@@ -12,7 +12,7 @@ The data used for this project is a gathering of 3 different datasets:
 
 ## Code
 
-I splitted the code various subsections to make the notebook easy to read and understand. The sections were:
+I split the code various subsections to make the notebook easy to read and understand. The sections were:
 
 - Data Gathering
   - Archived twitter data
